@@ -1,5 +1,4 @@
 -- CROSSARMS
-
 local crossarms = false
 
 RegisterCommand('crossarms', function()
@@ -20,7 +19,6 @@ end)
 RegisterKeyMapping('crossarms', 'Crossarms', 'keyboard', 'g')
 
 -- HANDSUP
-
 local handsup = false
 
 RegisterCommand('handsup', function()
