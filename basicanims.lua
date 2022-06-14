@@ -2,7 +2,7 @@
 local crossarms = false
 
 RegisterCommand('crossarms', function()
-	if not crossarms then
+    if not crossarms then
         local dict = "anim@amb@nightclub@peds@"
         RequestAnimDict(dict)
         while not HasAnimDictLoaded(dict) do
