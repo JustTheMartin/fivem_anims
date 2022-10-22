@@ -32,4 +32,4 @@ RegisterCommand('crouch', function()
         end 
     end 
 end)
-RegisterKeyMapping('crouch', "Crouch", 'keyboard', Config.CrouchBind)
+RegisterKeyMapping('crouch', Config.CrouchName, 'keyboard', Config.CrouchBind)
