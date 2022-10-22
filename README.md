@@ -1,6 +1,7 @@
 # basicanims
 
 ### Informations
+- Contains Handsup, Crossarms, Crouch
 - It is possible to bind it in Keybindings
 - 0.00 ms
 
