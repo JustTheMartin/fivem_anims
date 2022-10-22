@@ -26,6 +26,7 @@ RegisterCommand('crouch', function()
                     c = false
                 elseif (crouched == false) then
                     SetPedMovementClipset(ped, "move_ped_crouched", 0.25)
+                    RemoveAnimSet('move_ped_crouched')
                     crouched = true 
                 end 
             end
