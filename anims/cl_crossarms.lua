@@ -16,4 +16,4 @@ RegisterCommand('crossarms', function()
     end
 end)
 
-RegisterKeyMapping('crossarms', 'Crossarms', 'keyboard', Config.CrossarmsBind)
+RegisterKeyMapping('crossarms', Config.CrossarmsName, 'keyboard', Config.CrossarmsBind)
