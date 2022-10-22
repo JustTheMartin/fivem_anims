@@ -1,4 +1,4 @@
-# basicanims
+# fivem_anims
 
 ### Informations
 - Contains Handsup, Crossarms, Crouch
