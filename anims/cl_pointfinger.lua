@@ -66,4 +66,4 @@ RegisterCommand('point', function()
 
 end, false)
 
-RegisterKeyMapping('point', 'PointFinger', 'keyboard', 'b')
+RegisterKeyMapping('point', 'PointFinger', 'keyboard', Config.PointFingerBind)
