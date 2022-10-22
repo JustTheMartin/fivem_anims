@@ -16,4 +16,4 @@ RegisterCommand('handsup', function()
     end
 end)
 
-RegisterKeyMapping('handsup', 'Handsup', 'keyboard', Config.HandsupBind)
+RegisterKeyMapping('handsup', Config.HandsupName, 'keyboard', Config.HandsupBind)
