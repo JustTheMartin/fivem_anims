@@ -1,5 +1,4 @@
 Config = {}
-Config.AnimationsInVehicle = false -- true = Can turn on animations in vehicle, false = Can't
 
 -- Hands Up
 Config.HandsupBind = "X"
