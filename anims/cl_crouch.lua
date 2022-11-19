@@ -2,7 +2,7 @@
 local crouched = false
 RegisterCommand('crouch', function()
     	local ped = PlayerPedId()
-	if not isPedInAnyVehicle(ped, false) then
+	if not IsPedInAnyVehicle(ped, false) then
 	    c = true
 	    CreateThread(function()
 		while c do
