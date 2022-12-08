@@ -3,8 +3,8 @@ local crossarms = false
 
 RegisterCommand('crossarms', function()
     if not IsPedInAnyVehicle(PlayerPedId(), false) then
+        local dict = "anim@amb@nightclub@peds@"
         if not crossarms then
-                local dict = "anim@amb@nightclub@peds@"
                 RequestAnimDict(dict)
                 while not HasAnimDictLoaded(dict) do
                     Wait(500)
