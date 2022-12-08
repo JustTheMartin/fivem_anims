@@ -10,7 +10,6 @@ RegisterCommand('crossarms', function()
                     Wait(500)
                 end
                 TaskPlayAnim(PlayerPedId(), dict, "rcmme_amanda1_stand_loop_cop", 2.5, 2.5, -1, 50, 0, false, false, false)
-                RemoveAnimDict(dict)
                 crossarms = true
         else
             crossarms = false
