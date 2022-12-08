@@ -10,11 +10,11 @@ RegisterCommand('handsup', function()
                 Wait(500)
             end
             TaskPlayAnim(PlayerPedId(), dict, "handsup_standing_base", 2.5, 2.5, -1, 50, 0, false, false, false)
-            RemoveAnimDict(dict)
             handsup = true
         else
             handsup = false
-            ClearPedTasks(PlayerPedId())
+            StopAnimTask(PlayerPedId(), dict, "handsup_standing_base", -2.5)
+            RemoveAnimDict(dict)
         end
     end
 end)
