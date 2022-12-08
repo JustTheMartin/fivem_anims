@@ -3,8 +3,8 @@ local handsup = false
 
 RegisterCommand('handsup', function()
     if not IsPedInAnyVehicle(PlayerPedId(), false) then
+        local dict = "random@mugging3"
         if not handsup then
-            local dict = "random@mugging3"
             RequestAnimDict(dict)
             while not HasAnimDictLoaded(dict) do
                 Wait(500)
