@@ -14,7 +14,8 @@ RegisterCommand('crossarms', function()
                 crossarms = true
         else
             crossarms = false
-            ClearPedTasks(PlayerPedId())
+            StopAnimTask(PlayerPedId(), dict, "rcmme_amanda1_stand_loop_cop", -2.5)
+            RemoveAnimDict(dict)
         end
     end
 end)
