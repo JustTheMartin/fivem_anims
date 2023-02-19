@@ -1,7 +1,7 @@
 # fivem_anims
 
 ### Informations
-- Contains Handsup, Crossarms, Crouch and PointFinger
+- Contains Handsup, Crossarms, Crouch, PointFinger and Ragdoll
 - It is possible to bind it in Keybindings
 - 0.00 ms
 
