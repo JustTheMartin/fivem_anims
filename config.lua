@@ -15,3 +15,7 @@ Config.CrouchName = "Crouch" -- Name in Settings - Key Bindings - FiveM
 -- PointFinger
 Config.PointFingerBind = "B"
 Config.PointFingerName = "Point Finger" -- Name in Settings - Key Bindings - FiveM
+
+-- Rag
+Config.RagBind = "U"
+Config.RagName = "Ragdoll" -- Name in Settings - Key Bindings - FiveM
