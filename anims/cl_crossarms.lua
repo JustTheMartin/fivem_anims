@@ -1,19 +1,17 @@
 -- CROSSARMS
-local crossarms = false
+local ped = PlayerPedId()
 
 RegisterCommand('crossarms', function()
-    if not IsPedInAnyVehicle(PlayerPedId(), false) then
+    if not IsPedInAnyVehicle(ped, false) and not IsPedFalling(ped) then
         local dict = "anim@amb@nightclub@peds@"
-        if not crossarms then
-                RequestAnimDict(dict)
-                while not HasAnimDictLoaded(dict) do
-                    Wait(500)
-                end
-                TaskPlayAnim(PlayerPedId(), dict, "rcmme_amanda1_stand_loop_cop", 2.5, 2.5, -1, 50, 0, false, false, false)
-                crossarms = true
+        if not IsEntityPlayingAnim(oed, dict, "rcmme_amanda1_stand_loop_cop", 3) then
+            RequestAnimDict(dict)
+            while not HasAnimDictLoaded(dict) do
+                Wait(500)
+            end
+            TaskPlayAnim(ped, dict, "rcmme_amanda1_stand_loop_cop", 2.5, 2.5, -1, 50, 0, false, false, false)
         else
-            crossarms = false
-            StopAnimTask(PlayerPedId(), dict, "rcmme_amanda1_stand_loop_cop", -2.5)
+            StopAnimTask(ped, dict, "rcmme_amanda1_stand_loop_cop", -2.5)
             RemoveAnimDict(dict)
         end
     end
