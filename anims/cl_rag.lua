@@ -1,5 +1,6 @@
 -- RAG 
 RegisterCommand("rag", function(source, args, raw)
+	local ped = PlayerPedId()
 	if not ragdol then
 		ragdol = true
             Citizen.CreateThread(function()
