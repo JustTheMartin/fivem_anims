@@ -1,7 +1,7 @@
 local mp_pointing = false
 local keyPressed = false
-local playerPed = PlayerPedId()
 local function startPointing()
+    local playerPed = PlayerPedId()
     RequestAnimDict("anim@mp_point")
     while not HasAnimDictLoaded("anim@mp_point") do Wait(0) end
     SetPedCurrentWeaponVisible(playerPed, 0, 1, 1, 1)
@@ -10,6 +10,7 @@ local function startPointing()
     RemoveAnimDict("anim@mp_point")
 end
 local function stopPointing()
+    local playerPed = PlayerPedId()
     Citizen.InvokeNative(0xD01015C7316AE176, playerPed, "Stop")
     if not IsPedInjured(playerPed) then ClearPedSecondaryTask(playerPed) end
     if not IsPedInAnyVehicle(playerPed, 1) then
@@ -19,6 +20,7 @@ local function stopPointing()
     ClearPedSecondaryTask(playerPed)
 end
 RegisterCommand('point', function()
+    local playerPed = PlayerPedId()
     if not mp_pointing and IsPedOnFoot(playerPed) then
         Wait(200)
         keyPressed = true
