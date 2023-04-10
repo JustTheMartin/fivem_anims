@@ -4,7 +4,7 @@ RegisterCommand('crossarms', function()
     local ped = PlayerPedId()
     if not IsPedInAnyVehicle(ped, false) and not IsPedFalling(ped) then
         local dict = "anim@amb@nightclub@peds@"
-        if not IsEntityPlayingAnim(oed, dict, "rcmme_amanda1_stand_loop_cop", 3) then
+        if not IsEntityPlayingAnim(ped, dict, "rcmme_amanda1_stand_loop_cop", 3) then
             RequestAnimDict(dict)
             while not HasAnimDictLoaded(dict) do
                 Wait(500)
