@@ -3,7 +3,7 @@ RegisterCommand('handsup', function()
      local ped = PlayerPedId()
     if not IsPedInAnyVehicle(ped, false) and not IsPedFalling(ped) then
         local dict = "random@mugging3"
-        if not IsEntityPlayingAnim(oed, dict, "handsup_standing_base", 3) then
+        if not IsEntityPlayingAnim(ped, dict, "handsup_standing_base", 3) then
             RequestAnimDict(dict)
             while not HasAnimDictLoaded(dict) do
                 Wait(500)
