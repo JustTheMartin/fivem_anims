@@ -3,7 +3,7 @@
 ### Informations
 - Contains Handsup, Crossarms, Crouch, PointFinger and Ragdoll
 - It is possible to bind it in Keybindings
-- 0.00 ms
+- 0.00 ms when not in use 
 
 ### Installation
 ```
