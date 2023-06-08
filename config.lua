@@ -19,3 +19,5 @@ Config.PointFingerName = "Point Finger" -- Name in Settings - Key Bindings - Fiv
 -- Rag
 Config.RagBind = "U"
 Config.RagName = "Ragdoll" -- Name in Settings - Key Bindings - FiveM
+
+-- You can find more names of bindings on https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
