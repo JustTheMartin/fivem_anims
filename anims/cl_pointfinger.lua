@@ -7,7 +7,6 @@ local function startPointing()
     SetPedCurrentWeaponVisible(playerPed, 0, 1, 1, 1)
     SetPedConfigFlag(playerPed, 36, 1)
     Citizen.InvokeNative(0x2D537BA194896636, playerPed, "task_mp_pointing", 0.5, 0, "anim@mp_point", 24)
-    RemoveAnimDict("anim@mp_point")
 end
 local function stopPointing()
     local playerPed = PlayerPedId()
@@ -18,6 +17,7 @@ local function stopPointing()
     end
     SetPedConfigFlag(playerPed, 36, 0)
     ClearPedSecondaryTask(playerPed)
+    RemoveAnimDict("anim@mp_point")
 end
 RegisterCommand('point', function()
     local playerPed = PlayerPedId()
