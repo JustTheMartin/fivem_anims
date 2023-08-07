@@ -1,4 +1,5 @@
 -- RAG 
+local ragdol = false
 RegisterCommand("rag", function(source, args, raw)
     if not ragdol then
         ragdol = true
