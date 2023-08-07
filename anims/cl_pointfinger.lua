@@ -1,12 +1,14 @@
 local mp_pointing = false
 local keyPressed = false
+local dict = "anim@mp_point"
+local anim = "task_mp_pointing"
 local function startPointing()
     local playerPed = PlayerPedId()
-    RequestAnimDict("anim@mp_point")
-    while not HasAnimDictLoaded("anim@mp_point") do Wait(0) end
+    RequestAnimDict(dict)
+    while not HasAnimDictLoaded(dict) do Wait(0) end
     SetPedCurrentWeaponVisible(playerPed, 0, 1, 1, 1)
     SetPedConfigFlag(playerPed, 36, 1)
-    Citizen.InvokeNative(0x2D537BA194896636, playerPed, "task_mp_pointing", 0.5, 0, "anim@mp_point", 24)
+    Citizen.InvokeNative(0x2D537BA194896636, playerPed, anim, 0.5, 0, dict, 24)
 end
 local function stopPointing()
     local playerPed = PlayerPedId()
@@ -17,7 +19,7 @@ local function stopPointing()
     end
     SetPedConfigFlag(playerPed, 36, 0)
     ClearPedSecondaryTask(playerPed)
-    RemoveAnimDict("anim@mp_point")
+    RemoveAnimDict(dict)
 end
 RegisterCommand('point', function()
     local playerPed = PlayerPedId()
