@@ -1,16 +1,17 @@
 -- HANDSUP
+local dict = "random@mugging3"
+local anim = "handsup_standing_base"
 RegisterCommand('handsup', function()
      local ped = PlayerPedId()
     if not IsPedInAnyVehicle(ped, false) and not IsPedFalling(ped) then
-        local dict = "random@mugging3"
-        if not IsEntityPlayingAnim(ped, dict, "handsup_standing_base", 3) then
+        if not IsEntityPlayingAnim(ped, dict, anim, 3) then
             RequestAnimDict(dict)
             while not HasAnimDictLoaded(dict) do
                 Wait(500)
             end
-            TaskPlayAnim(PlayerPedId(), dict, "handsup_standing_base", 2.5, 2.5, -1, 50, 0, false, false, false)
+            TaskPlayAnim(PlayerPedId(), dict, anim, 2.5, 2.5, -1, 50, 0, false, false, false)
         else
-            StopAnimTask(PlayerPedId(), dict, "handsup_standing_base", -2.5)
+            StopAnimTask(PlayerPedId(), dict, anim, -2.5)
             RemoveAnimDict(dict)
         end
     end
