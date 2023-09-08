@@ -22,12 +22,12 @@ RegisterCommand('crouch', function()
 			while (not HasAnimSetLoaded(dict)) do 
 			    Wait(1000)
 			end 
-			if (crouched == true) then 
+			if crouched then 
 			    ResetPedMovementClipset(ped, 0)
 			    crouched = false 
 			    Wait(1000)
 			    c = false
-			elseif (crouched == false) then
+			else
 			    SetPedMovementClipset(ped, dict, 0.25)
 			    RemoveAnimSet(dict)
 			    crouched = true 
